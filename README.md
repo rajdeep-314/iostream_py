@@ -11,16 +11,16 @@ cout << "Hello, World!" << endl
 
 should print `Hello, World!` to the console. <br>
 
-That, in itself is quite easy, just create an `ostream` class for instantiating `cout`, `cerr` and `clog`. Then define a `__lshift__` to make `<<` usable. Implement a buffer for those ostream objects that require it (namely, `cout` and `clog` here. And then, make another class for the function-esque `ostream_manipulators`, such as `endl`, for which executing `ostream_obj << ostream_manipulator` would execute `ostream_manipulator(ostream_obj)`, and return `ostream_obj`.
+That, in itself is quite easy, just create an `ostream` class for instantiating `cout`, `cerr` and `clog`. Then define a `__lshift__` to make `<<` usable. Implement a buffer for those ostream objects that require it (namely, `cout` and `clog` here). And then, make another class for the function-esque `ostream_manipulators`, such as `endl`, for which executing `ostream_obj << ostream_manipulator` would execute `ostream_manipulator(ostream_obj)`, and return `ostream_obj`.
 
-By the way, if you didn't know, the following works in C++
+By the way, the following works in C++
 ```c++
 #include <iostream>
 
 int main() {
     std::cout << "Hi";
     std::endl(std::cout);
-    std:;cout << "There";
+    std::cout << "There";
 }
 ```
 
@@ -60,7 +60,7 @@ However, the mutable classes are a long way from perfect. I keep encountering un
 x = mutable_int(10)
 y = 'abcd'
 
-print(x*y, y*x, sep = "\n")          # One of them usually doesn't work, sometimes both of them don't work
+print(x*y, y*x, sep = "\n")          # One of these (sometimes both) usually doesn't work
 ```
 
 But the following does work
@@ -71,7 +71,7 @@ y = mutable_str('abcd')
 print(x*y, y*x, sep = "\n")
 ```
 
-And I have no idea why, and I'm currently a little confused to figure out why.
+Why the disparity? I don't know yet.
 
 <hr>
 
