@@ -39,9 +39,9 @@ cout << 'H' << 'e' << 'l' << 'l' << 'o' << ',' << ' ' << 'W' << 'o' << 'r' << 'l
 
 <br>
 
-To take input from the user, decide what kind of an object you want to store the input in (out of int, str and float, currently)
+To take input from the user, decide what kind of an object you want to store the input in (out of int, str and float, currently), then define a variable with your chosen type's corresponding mutable type (mutable_int for int, for example). Once you've done that, just use `cin >> var`, `var` being your newly defined variable name.
 
-Here's an example to show how to take someone's name and age as input
+Here's an example
 ```python
 name = mutable_str()
 age = mutable_int()
