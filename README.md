@@ -6,11 +6,60 @@ The repository needs some tiding up and a good README file, but for now, this sh
 
 I've fixed the `mutable_tpyes` now, for the most part (only one bug found so far). I'm not using a metaclass anymore, as I was overcomplicating it. I will probably condense the three class definitions in `mutable_types.py` to three calls to a single function, the function serving as a template, of sorts.
 
-The stuff that follows is no longer entirely relevant to the current state of the repository, but it has some important points that I want to incorporate into the final README, so I'm still leaving it here. Feel free to go through it :)
+The stuff that follows "Previously" is no longer entirely relevant to the current state of the repository, but it has some important points that I want to incorporate into the final README, so I'm still leaving it here. Feel free to go through it :)
 
 For a proper demo of the facilities provided across the modules, check out `iostream_demo.py`
 
 <hr>
+
+## How to use
+
+Import everything from `iostream.py` into your script using
+```python3
+from iostream import *
+```
+
+You're free to explore around now! All the programs below assume that everything from `iostream` has already been imported
+
+Let's create a Hello, World! program
+
+```python3
+cout << "Hello, World!" << endl
+```
+
+Or if you want to stand out
+```python3
+cout << "Hello, " << "World!" << endl
+```
+
+Or if you want to stand out even more so
+```python3
+cout << 'H' << 'e' << 'l' << 'l' << 'o' << ',' << ' ' << 'W' << 'o' << 'r' << 'l' << 'd' << '!' << endl
+```
+
+<br>
+
+To take input from the user, decide what kind of an object you want to store the input in (out of int, str and float, currently)
+
+Here's an example to show how to take someone's name and age as input
+```python
+name = mutable_str()
+age = mutable_int()
+
+cout << "Enter your name (no spaces) : "
+cin >> name
+cout << "Enter your age : "
+cin >> age
+
+cout << "\nHello " << name << ", you are " << ("not "*(age < 18)) << "an adult" << endl
+cout << "In two years, your age will be : " << (2*age)
+```
+
+For more details, check out `iostream_demo.py`
+
+<hr>
+
+## Previously
 
 I wanted to make syntax similar to C++'s standard I/O operations work in Python. For example:
 ```python
