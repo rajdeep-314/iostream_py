@@ -20,7 +20,13 @@ class mutable_int():
         exec(meth + ' = ' + meth + 'func')
 
 
-class mutable_str():
+# Only mutable_str is inheriting from str
+# to work around the bug where syntax like
+# 'x' + mutable_str('y') would not work
+# Making mutable_int inherit from int or
+# mutable_float inherit from float messes
+# up a few considerable things.
+class mutable_str(str):
     def __init__(self, arg=''):
         self._value = str(arg)
 
