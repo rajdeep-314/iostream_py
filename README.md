@@ -2,6 +2,16 @@
 
 The repository needs some tiding up and a good README file, but for now, this should do.
 
+## Note
+
+I've fixed the `mutable_tpyes` now, for the most part (only one bug found so far). I'm not using a metaclass anymore, as I was overcomplicating it. I will probably condense the three class definitions in `mutable_types.py` to three calls to a single function, the function serving as a template, of sorts.
+
+The stuff that follows is no longer entirely relevant to the current state of the repository, but it has some important points that I want to incorporate into the final README, so I'm still leaving it here. Feel free to go through it :)
+
+For a proper demo of the facilities provided across the modules, check out `iostream_demo.py`
+
+<hr>
+
 I wanted to make syntax similar to C++'s standard I/O operations work in Python. For example:
 ```python
 from iostream_py import *
