@@ -27,12 +27,12 @@ Let's create a Hello, World! program
 cout << "Hello, World!" << endl
 ```
 
-Or if you want to stand out
+Or if you want to stand out:
 ```python3
 cout << "Hello, " << "World!" << endl
 ```
 
-Or if you want to stand out even more so
+Or if that's not enough standing out for you, then:
 ```python3
 cout << 'H' << 'e' << 'l' << 'l' << 'o' << ',' << ' ' << 'W' << 'o' << 'r' << 'l' << 'd' << '!' << endl
 ```
