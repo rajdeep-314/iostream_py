@@ -1,6 +1,6 @@
 # iostream
 
-The repository needs some tiding up and a good README file, but for now, this should do.
+The repository needs some tidying up and a good README file, but for now, this should do.
 
 ## Note
 
